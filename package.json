@@ -1,0 +1,27 @@
+{
+  "name": "hangman-cli",
+  "version": "1.0.0",
+  "description": "Hangman CLI game",
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levicrouch/hangman-CLI.git"
+  },
+  "keywords": [
+    "hangman",
+    "game",
+    "CLI"
+  ],
+  "author": "Levi Crouch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/levicrouch/hangman-CLI/issues"
+  },
+  "homepage": "https://github.com/levicrouch/hangman-CLI#readme",
+  "dependencies": {
+    "inquirer": "^4.0.1"
+  }
+}
