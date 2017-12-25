@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/levicrouch/hangman-CLI#readme",
   "dependencies": {
-    "inquirer": "^4.0.1"
+    "inquirer": "^4.0.1",
+    "request": "^2.83.0"
   }
 }
