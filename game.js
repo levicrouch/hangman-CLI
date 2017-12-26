@@ -9,31 +9,38 @@ var objChallengeWord = new Word();
 var objGuessedLetter = new Letter();
 
 // DONE Create a counter to track which question's have been asked
-var questionCounter = 38;
+var questionCounter = 0;
 var loop = 0;
-var totalAttempts = 5;
+var maxAttempts = 5;
+var attempts = maxAttempts;
 // var loop = 0;
-var userGuessLetter = function (loop) {
-    console.log(loop);
+var userGuessLetter = function (attempts) {
+    console.log(attempts);
+    console.log("Attempts left: ", attempts);
     var challengeWord = objChallengeWord.pickNewWord(questionCounter);
     console.log("challengeWord:", challengeWord);
-    if (loop < totalAttempts) {
+    if (attempts <= maxAttempts && attempts > 0) {
         inquirer.prompt({
             name: "userGuess",
             message: "Guess a letter: "
         }).then(function (guesses) {
             console.log("you guessed: ", guesses.userGuess);
-            loop++
-            userGuessLetter(loop);
+            // TODO: if the letter guessed is not in the challenge word,
+            // decrement the number of attempts left
+            if(!objGuessedLetter.matchLetters(challengeWord,guesses.userGuess)){
+                attempts--;
+            }
+            // loop++
+            userGuessLetter(attempts);
         });
     } else if (questionCounter < objChallengeWord.movieTitleArr.length) {
         questionCounter++
-        loop = 0;
-        totalAttempts = 5;
-        userGuessLetter(loop);
+        attempts = maxAttempts;
+        // totalAttempts = 5;
+        userGuessLetter(attempts);
     }
 }
-userGuessLetter(loop);
+userGuessLetter(attempts);
 
 
 function playGame() {

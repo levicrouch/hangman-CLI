@@ -18,7 +18,7 @@ var Letter = function () {
         }
         return letterCount;
     }
-    this.displayLetters = function (selectedWord, chosenLetter) {
+    this.matchLetters = function (selectedWord, chosenLetter) {
         // convert word to lowercase
         selectedWord = selectedWord.toLowerCase();
         // declare an array to store the index of the matched letter
@@ -41,6 +41,7 @@ var Letter = function () {
         else {
             unmatchedLetters.push(chosenLetter);
         }
+        return letterFound;
         // console.log("this.disguisedWord", this.disguisedWord);
         // console.log("letterNotFound", letterNotFound);
     }
