@@ -25,4 +25,4 @@ This application is a server-side application running on node.js. The applicatio
 * Install node packages:
     <pre><code>npm install</pre></code>
 * Execute the game:
-    node game.js
+    <pre><code>node game.js</pre></code>
