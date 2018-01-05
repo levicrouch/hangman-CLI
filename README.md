@@ -17,3 +17,12 @@ Hint: the words are all movie titles.
 
 ## Technical notes:
 This application is a server-side application running on node.js. The application uses inquirer to prompt the user for information. The application leverages our knowledge of javascript constructors so that we can reduce the amount of repeating code.
+
+## Setup Instructions:
+* Clone the repository to your local drive.
+* Install node.js.
+* Open a terminal in the root directory
+* Install node packages:
+    npm install
+* Execute the game:
+    node game.js
