@@ -23,6 +23,6 @@ This application is a server-side application running on node.js. The applicatio
 * Install node.js.
 * Open a terminal in the root directory
 * Install node packages:
-    npm install
+    <pre><code>npm install</pre></code>
 * Execute the game:
     node game.js
