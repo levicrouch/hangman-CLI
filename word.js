@@ -1,7 +1,5 @@
 // constructor to generate and display the words for the game
 
-
-
 var Word = function () {
     this.movieTitleArr = [
         "The Shawshank Redemption", "Good Will Hunting", "Forrest Gump", "Pulp Fiction", "American Beauty",
@@ -17,35 +15,12 @@ var Word = function () {
         // pick a title from the movieTitleArr to display to the user
         this.storedPick = this.movieTitleArr[count];
         // output the selected word - disguised
-        this.disguisedWord = this.storedPick.replace(/[a-z]/gi, "_ ");
-        // console.log("disguisedWord", this.disguisedWord);
+        this.disguisedWord = this.storedPick.replace(/[a-z]/gi, "_");
         return this.storedPick;
-    };
-    // 
+    }; 
     // Store the picked word and letter count of that word
     this.storedPick = "";
     this.disguisedWord = "";
-    
-    
 };
-// var objNewPick = new Word();
-// objNewPick.pick();
-// objNewPick.displayLetters(objNewPick.storedPick, "z");
-// objNewPick.displayLetters(objNewPick.storedPick, "x");
-// objNewPick.displayLetters(objNewPick.storedPick, "y");
-// objNewPick.displayLetters(objNewPick.storedPick, "f");
-// objNewPick.displayLetters(objNewPick.storedPick, "a");
-// objNewPick.displayLetters(objNewPick.storedPick, "r");
-// objNewPick.displayLetters(objNewPick.storedPick, "k");
-// objNewPick.displayLetters(objNewPick.storedPick, "h");
-// objNewPick.displayLetters(objNewPick.storedPick, "t");
-// objNewPick.displayLetters(objNewPick.storedPick, "w");
-// objNewPick.displayLetters(objNewPick.storedPick, "n");
-// for (i = 0; i < objNewPick.movieTitleArr.length; i++) {
-    // console.log(objNewPick.pick());
-    // console.log("Number of letters in selected word: " + objNewPick.letterCount(objNewPick.storedPick));
-    // Or simply write output
 
-    // ui.updateBottomBar('new bottom bar content');
-// }
 module.exports = Word;
